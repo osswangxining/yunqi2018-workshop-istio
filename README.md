@@ -9,16 +9,16 @@ Istio是一个用于连接/管理以及安全化微服务的开放平台，提�
 
 四个单独的微服务：
 
-•	productpage ：productpage 微服务会调用 details 和 addedvalues两个微服务，用来生成页面。
-•	details ：该微服务包含了金融产品的信息。
-•	addedvalues：该微服务包含了针对特定用户的增值服务。它还会调用 styletransfer微服务。
-•	styletransfer：该微服务提供了转移照片艺术风格的API功能。
+-	productpage ：productpage 微服务会调用 details 和 addedvalues两个微服务，用来生成页面。
+-	details ：该微服务包含了金融产品的信息。
+-	addedvalues：该微服务包含了针对特定用户的增值服务。它还会调用 styletransfer微服务。
+-	styletransfer：该微服务提供了转移照片艺术风格的API功能。
 
 addedvalues微服务有 3 个版本：
 
-•	v1 版本不会调用 styletransfer 服务，也不会提供风险和投资分析结果。
-•	v2 版本不会调用 styletransfer 服务，但会提供风险和投资分析结果。
-•	v3 版本会调用 styletransfer 服务，提供针对特定用户的增值服务，即允许用户上传图片进行风格转换，并返回一张转换后的图片。 
+-	v1 版本不会调用 styletransfer 服务，也不会提供风险和投资分析结果。
+-	v2 版本不会调用 styletransfer 服务，但会提供风险和投资分析结果。
+-	v3 版本会调用 styletransfer 服务，提供针对特定用户的增值服务，即允许用户上传图片进行风格转换，并返回一张转换后的图片。 
 
 ## 准备Kubernetes集群
 阿里云容器服务Kubernetes 1.10.4目前已经上线，可以通过容器服务管理控制台非常方便地快速创建 Kubernetes 集群。具体过程可以参考[创建Kubernetes集群](https://help.aliyun.com/document_detail/53752.html)。
