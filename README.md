@@ -67,7 +67,9 @@ kubectl apply -f gateway.yaml
 
 ### 确认所有的服务和 Pod 都已经正确的定义和启动
 ```
-kubectl get services kubectl get pods
+kubectl get services
+
+kubectl get pods
 ```
 
 ### 确认网关创建完成
