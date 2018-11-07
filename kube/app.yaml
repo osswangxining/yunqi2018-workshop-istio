@@ -141,7 +141,7 @@ spec:
         imagePullPolicy: Always
         env:
         - name: STYLE_TRANSFER_URL
-          value: "http://101.37.178.225"
+          value: "https://www.aliyun.com"
         ports:
         - containerPort: 9080
 ---
