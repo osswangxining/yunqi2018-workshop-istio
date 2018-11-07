@@ -141,5 +141,14 @@ kubectl apply -f serviceentry.yaml
 ![图片.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/638bf110d0e16ed8cbf355183c66eb6f.png)
 
 
-## 总结
+## Clean
+```
+kubectl delete -f app.yaml
 
+kubectl delete -f destination-rule-all.yaml
+
+kubectl delete -f gateway.yaml
+
+kubectl delete -f virtual-service-user-v2-v3.yaml
+
+```
