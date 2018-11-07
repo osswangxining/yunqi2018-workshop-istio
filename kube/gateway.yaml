@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: demo-gateway
+  name: demo-default-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -21,7 +21,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - demo-gateway
+  - demo-default-gateway
   http:
   - match:
     - uri:
@@ -36,7 +36,7 @@ spec:
         prefix: /api/v1/products
     route:
     - destination:
-        host: productpage
+        host: productpage.default.svc.cluster.local
         port:
           number: 9080
   
