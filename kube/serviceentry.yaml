@@ -4,10 +4,10 @@ metadata:
   name: external-svc-styletransfer
 spec:
   hosts:
-  - 101.37.178.225
+  - www.aliyun.com
   location: MESH_EXTERNAL
   ports:
-  - number: 80
-    name: http
-    protocol: HTTP
+  - number: 443
+    name: https
+    protocol: HTTPS
   resolution: NONE
