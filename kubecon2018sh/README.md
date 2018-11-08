@@ -127,3 +127,8 @@ kubectl apply -f virtualservice-user-v2-v3.yaml
 当使用以yunqi开头的用户名登录时，就会看到如下页面内容， 也就是上述提到的 第3 个版本的addedvalues微服务。
 ![图片.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/f0405d500aebbb6774a944215e61f192.png)
 
+
+## Clean
+```
+kubectl delete -f .
+```
