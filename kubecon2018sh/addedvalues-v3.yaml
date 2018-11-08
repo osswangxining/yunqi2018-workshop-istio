@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: addedvalues-v3
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: addedvalues
+        version: v3
+    spec:
+      containers:
+      - name: addedvalues
+        image: registry.cn-hangzhou.aliyuncs.com/aliacs-app-catalog/istio-examples-addedvalues-v3:1.0
+        imagePullPolicy: Always
+        env:
+        - name: STYLE_TRANSFER_URL
+          value: "https://www.aliyun.com"
+        ports:
+        - containerPort: 9080
+---

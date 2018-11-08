@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: addedvalues
+spec:
+  hosts:
+  - addedvalues
+  http:
+  - route:
+    - destination:
+        host: addedvalues
+        subset: v2
+      weight: 100
+  

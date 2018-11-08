@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: addedvalues-v2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: addedvalues
+        version: v2
+    spec:
+      containers:
+      - name: addedvalues
+        image: registry.cn-hangzhou.aliyuncs.com/aliacs-app-catalog/istio-examples-addedvalues-v2:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9080
+---
