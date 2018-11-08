@@ -6,17 +6,15 @@
 
 示例中用到的文件请参考： [文件](https://github.com/osswangxining/yunqi2018-workshop-istio)
 
+Clone下载到本地，切换到目录kubecon2018sh。
+查看本文件： https://github.com/osswangxining/yunqi2018-workshop-istio/tree/master/kubecon2018sh
+
 ## 部署Istio
 
 打开容器服务控制台，在左侧导航栏中选中集群，右侧点击更多，在弹出的菜单中选中 部署Istio。
 
-![图片.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/948a1d91344a0ce046076febf9886176.png)
-
 在打开的页面中可以看到Istio默认安装的命名空间、发布名称；
-通过勾选来确认是否安装相应的模块，默认是勾选前四项；
-第5项是提供基于日志服务的分布式跟踪能力，本演示中不启用。
-![图片.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/2b58c09f755dd6668ebcb47099a968b8.png)
-
+通过勾选来确认是否安装相应的模块，注意勾选下**Kiali**；
 
 点击 部署Istio 按钮，几十秒钟之后即可完成部署。
 
@@ -32,6 +30,12 @@
 
 ![图片.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/c69588b05167690a29d93ee66f509c89.png)
 
+## 创建Ingress查看Kiali
+路由-> 命名空间istio-system,点击创建。输入名称为kiali, 域名也为kiali, 选择服务kiali及端口20001.
+
+后续步骤中会随时查看Kiali，来展示服务之间的调用关系。
+
+## 部署应用
 ### 使用 kubectl 部署简单的服务
 ```
 kubectl apply -f app.yaml
